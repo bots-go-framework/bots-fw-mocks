@@ -11,6 +11,7 @@ package mock_botinput
 
 import (
 	reflect "reflect"
+	time "time"
 
 	botinput "github.com/bots-go-framework/bots-fw/botinput"
 	gomock "go.uber.org/mock/gomock"
@@ -40,6 +41,21 @@ func (m *MockWebhookStickerMessage) EXPECT() *MockWebhookStickerMessageMockRecor
 	return m.recorder
 }
 
+// BotChatID mocks base method.
+func (m *MockWebhookStickerMessage) BotChatID() (string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BotChatID")
+	ret0, _ := ret[0].(string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BotChatID indicates an expected call of BotChatID.
+func (mr *MockWebhookStickerMessageMockRecorder) BotChatID() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BotChatID", reflect.TypeOf((*MockWebhookStickerMessage)(nil).BotChatID))
+}
+
 // Chat mocks base method.
 func (m *MockWebhookStickerMessage) Chat() botinput.WebhookChat {
 	m.ctrl.T.Helper()
@@ -54,6 +70,62 @@ func (mr *MockWebhookStickerMessageMockRecorder) Chat() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Chat", reflect.TypeOf((*MockWebhookStickerMessage)(nil).Chat))
 }
 
+// GetRecipient mocks base method.
+func (m *MockWebhookStickerMessage) GetRecipient() botinput.WebhookRecipient {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetRecipient")
+	ret0, _ := ret[0].(botinput.WebhookRecipient)
+	return ret0
+}
+
+// GetRecipient indicates an expected call of GetRecipient.
+func (mr *MockWebhookStickerMessageMockRecorder) GetRecipient() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecipient", reflect.TypeOf((*MockWebhookStickerMessage)(nil).GetRecipient))
+}
+
+// GetSender mocks base method.
+func (m *MockWebhookStickerMessage) GetSender() botinput.WebhookUser {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSender")
+	ret0, _ := ret[0].(botinput.WebhookUser)
+	return ret0
+}
+
+// GetSender indicates an expected call of GetSender.
+func (mr *MockWebhookStickerMessageMockRecorder) GetSender() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSender", reflect.TypeOf((*MockWebhookStickerMessage)(nil).GetSender))
+}
+
+// GetTime mocks base method.
+func (m *MockWebhookStickerMessage) GetTime() time.Time {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTime")
+	ret0, _ := ret[0].(time.Time)
+	return ret0
+}
+
+// GetTime indicates an expected call of GetTime.
+func (mr *MockWebhookStickerMessageMockRecorder) GetTime() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTime", reflect.TypeOf((*MockWebhookStickerMessage)(nil).GetTime))
+}
+
+// InputType mocks base method.
+func (m *MockWebhookStickerMessage) InputType() botinput.WebhookInputType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "InputType")
+	ret0, _ := ret[0].(botinput.WebhookInputType)
+	return ret0
+}
+
+// InputType indicates an expected call of InputType.
+func (mr *MockWebhookStickerMessageMockRecorder) InputType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InputType", reflect.TypeOf((*MockWebhookStickerMessage)(nil).InputType))
+}
+
 // IntID mocks base method.
 func (m *MockWebhookStickerMessage) IntID() int64 {
 	m.ctrl.T.Helper()
@@ -66,6 +138,18 @@ func (m *MockWebhookStickerMessage) IntID() int64 {
 func (mr *MockWebhookStickerMessageMockRecorder) IntID() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IntID", reflect.TypeOf((*MockWebhookStickerMessage)(nil).IntID))
+}
+
+// LogRequest mocks base method.
+func (m *MockWebhookStickerMessage) LogRequest() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "LogRequest")
+}
+
+// LogRequest indicates an expected call of LogRequest.
+func (mr *MockWebhookStickerMessageMockRecorder) LogRequest() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "LogRequest", reflect.TypeOf((*MockWebhookStickerMessage)(nil).LogRequest))
 }
 
 // StringID mocks base method.

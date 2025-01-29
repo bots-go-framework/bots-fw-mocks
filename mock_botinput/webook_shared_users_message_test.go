@@ -16,6 +16,7 @@ func TestNewMockWebhookSharedUsersMessage(t *testing.T) {
 		NewMockSharedUserMessageItem(ctrl),
 	}
 	mockM.EXPECT().GetSharedUsers().Return(expectedSharedUsers)
+	var _ botinput.WebhookInput = mockM
 	var m botinput.WebhookSharedUsersMessage = mockM
 	if sharedUser := m.GetSharedUsers(); sharedUser == nil {
 		t.Fatalf("GetSharedUsers returned nil")

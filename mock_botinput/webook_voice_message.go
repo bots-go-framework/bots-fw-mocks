@@ -11,6 +11,7 @@ package mock_botinput
 
 import (
 	reflect "reflect"
+	time "time"
 
 	botinput "github.com/bots-go-framework/bots-fw/botinput"
 	gomock "go.uber.org/mock/gomock"
@@ -40,6 +41,21 @@ func (m *MockWebhookVoiceMessage) EXPECT() *MockWebhookVoiceMessageMockRecorder 
 	return m.recorder
 }
 
+// BotChatID mocks base method.
+func (m *MockWebhookVoiceMessage) BotChatID() (string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BotChatID")
+	ret0, _ := ret[0].(string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BotChatID indicates an expected call of BotChatID.
+func (mr *MockWebhookVoiceMessageMockRecorder) BotChatID() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BotChatID", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).BotChatID))
+}
+
 // Chat mocks base method.
 func (m *MockWebhookVoiceMessage) Chat() botinput.WebhookChat {
 	m.ctrl.T.Helper()
@@ -54,6 +70,62 @@ func (mr *MockWebhookVoiceMessageMockRecorder) Chat() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Chat", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).Chat))
 }
 
+// GetRecipient mocks base method.
+func (m *MockWebhookVoiceMessage) GetRecipient() botinput.WebhookRecipient {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetRecipient")
+	ret0, _ := ret[0].(botinput.WebhookRecipient)
+	return ret0
+}
+
+// GetRecipient indicates an expected call of GetRecipient.
+func (mr *MockWebhookVoiceMessageMockRecorder) GetRecipient() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecipient", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).GetRecipient))
+}
+
+// GetSender mocks base method.
+func (m *MockWebhookVoiceMessage) GetSender() botinput.WebhookUser {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSender")
+	ret0, _ := ret[0].(botinput.WebhookUser)
+	return ret0
+}
+
+// GetSender indicates an expected call of GetSender.
+func (mr *MockWebhookVoiceMessageMockRecorder) GetSender() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSender", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).GetSender))
+}
+
+// GetTime mocks base method.
+func (m *MockWebhookVoiceMessage) GetTime() time.Time {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTime")
+	ret0, _ := ret[0].(time.Time)
+	return ret0
+}
+
+// GetTime indicates an expected call of GetTime.
+func (mr *MockWebhookVoiceMessageMockRecorder) GetTime() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTime", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).GetTime))
+}
+
+// InputType mocks base method.
+func (m *MockWebhookVoiceMessage) InputType() botinput.WebhookInputType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "InputType")
+	ret0, _ := ret[0].(botinput.WebhookInputType)
+	return ret0
+}
+
+// InputType indicates an expected call of InputType.
+func (mr *MockWebhookVoiceMessageMockRecorder) InputType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InputType", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).InputType))
+}
+
 // IntID mocks base method.
 func (m *MockWebhookVoiceMessage) IntID() int64 {
 	m.ctrl.T.Helper()
@@ -66,6 +138,18 @@ func (m *MockWebhookVoiceMessage) IntID() int64 {
 func (mr *MockWebhookVoiceMessageMockRecorder) IntID() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IntID", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).IntID))
+}
+
+// LogRequest mocks base method.
+func (m *MockWebhookVoiceMessage) LogRequest() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "LogRequest")
+}
+
+// LogRequest indicates an expected call of LogRequest.
+func (mr *MockWebhookVoiceMessageMockRecorder) LogRequest() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "LogRequest", reflect.TypeOf((*MockWebhookVoiceMessage)(nil).LogRequest))
 }
 
 // StringID mocks base method.

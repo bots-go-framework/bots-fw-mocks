@@ -11,6 +11,7 @@ package mock_botinput
 
 import (
 	reflect "reflect"
+	time "time"
 
 	botinput "github.com/bots-go-framework/bots-fw/botinput"
 	gomock "go.uber.org/mock/gomock"
@@ -40,6 +41,21 @@ func (m *MockWebhookSharedUsersMessage) EXPECT() *MockWebhookSharedUsersMessageM
 	return m.recorder
 }
 
+// BotChatID mocks base method.
+func (m *MockWebhookSharedUsersMessage) BotChatID() (string, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "BotChatID")
+	ret0, _ := ret[0].(string)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// BotChatID indicates an expected call of BotChatID.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) BotChatID() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BotChatID", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).BotChatID))
+}
+
 // Chat mocks base method.
 func (m *MockWebhookSharedUsersMessage) Chat() botinput.WebhookChat {
 	m.ctrl.T.Helper()
@@ -52,6 +68,34 @@ func (m *MockWebhookSharedUsersMessage) Chat() botinput.WebhookChat {
 func (mr *MockWebhookSharedUsersMessageMockRecorder) Chat() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Chat", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).Chat))
+}
+
+// GetRecipient mocks base method.
+func (m *MockWebhookSharedUsersMessage) GetRecipient() botinput.WebhookRecipient {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetRecipient")
+	ret0, _ := ret[0].(botinput.WebhookRecipient)
+	return ret0
+}
+
+// GetRecipient indicates an expected call of GetRecipient.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) GetRecipient() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecipient", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetRecipient))
+}
+
+// GetSender mocks base method.
+func (m *MockWebhookSharedUsersMessage) GetSender() botinput.WebhookUser {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetSender")
+	ret0, _ := ret[0].(botinput.WebhookUser)
+	return ret0
+}
+
+// GetSender indicates an expected call of GetSender.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) GetSender() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSender", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetSender))
 }
 
 // GetSharedUsers mocks base method.
@@ -68,6 +112,34 @@ func (mr *MockWebhookSharedUsersMessageMockRecorder) GetSharedUsers() *gomock.Ca
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetSharedUsers", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetSharedUsers))
 }
 
+// GetTime mocks base method.
+func (m *MockWebhookSharedUsersMessage) GetTime() time.Time {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTime")
+	ret0, _ := ret[0].(time.Time)
+	return ret0
+}
+
+// GetTime indicates an expected call of GetTime.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) GetTime() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTime", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetTime))
+}
+
+// InputType mocks base method.
+func (m *MockWebhookSharedUsersMessage) InputType() botinput.WebhookInputType {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "InputType")
+	ret0, _ := ret[0].(botinput.WebhookInputType)
+	return ret0
+}
+
+// InputType indicates an expected call of InputType.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) InputType() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InputType", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).InputType))
+}
+
 // IntID mocks base method.
 func (m *MockWebhookSharedUsersMessage) IntID() int64 {
 	m.ctrl.T.Helper()
@@ -80,6 +152,18 @@ func (m *MockWebhookSharedUsersMessage) IntID() int64 {
 func (mr *MockWebhookSharedUsersMessageMockRecorder) IntID() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "IntID", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).IntID))
+}
+
+// LogRequest mocks base method.
+func (m *MockWebhookSharedUsersMessage) LogRequest() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "LogRequest")
+}
+
+// LogRequest indicates an expected call of LogRequest.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) LogRequest() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "LogRequest", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).LogRequest))
 }
 
 // StringID mocks base method.
