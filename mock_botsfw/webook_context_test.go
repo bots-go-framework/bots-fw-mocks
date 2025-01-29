@@ -11,6 +11,7 @@ func TestNewMockWebhookContext(t *testing.T) {
 	if whcMock == nil {
 		t.Fatalf("NewMockWebhookContext() should not return nil")
 	}
+	whcMock.Input()
 	//whcMock.EXPECT().AppUserID().Return("123")
 	//_ = whcMock.AppUserID()
 }
