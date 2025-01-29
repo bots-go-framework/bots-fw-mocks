@@ -6,6 +6,7 @@ mockgen github.com/bots-go-framework/bots-fw/botinput WebhookEntry > mock_botinp
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookInput > mock_botinput/webook_input.go
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookUser > mock_botinput/webook_user.go
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookSender > mock_botinput/webook_sender.go
+mockgen github.com/bots-go-framework/bots-fw/botinput SharedUserMessageItem > mock_botinput/webook_shared_user_message_item.go
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookSharedUsersMessage > mock_botinput/webook_shared_users_message.go
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookMessage > mock_botinput/webook_message.go
 mockgen github.com/bots-go-framework/bots-fw/botinput WebhookTextMessage > mock_botinput/webook_text_message.go
