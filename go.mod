@@ -1,4 +1,4 @@
-module gihub.com/bots-go-framework/bots-fw-mocks
+module github.com/bots-go-framework/bots-fw-mocks
 
 go 1.23.5
 
