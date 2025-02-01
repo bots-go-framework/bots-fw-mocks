@@ -84,6 +84,20 @@ func (mr *MockWebhookSharedUsersMessageMockRecorder) GetRecipient() *gomock.Call
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRecipient", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetRecipient))
 }
 
+// GetRequestID mocks base method.
+func (m *MockWebhookSharedUsersMessage) GetRequestID() int {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetRequestID")
+	ret0, _ := ret[0].(int)
+	return ret0
+}
+
+// GetRequestID indicates an expected call of GetRequestID.
+func (mr *MockWebhookSharedUsersMessageMockRecorder) GetRequestID() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRequestID", reflect.TypeOf((*MockWebhookSharedUsersMessage)(nil).GetRequestID))
+}
+
 // GetSender mocks base method.
 func (m *MockWebhookSharedUsersMessage) GetSender() botinput.WebhookUser {
 	m.ctrl.T.Helper()
