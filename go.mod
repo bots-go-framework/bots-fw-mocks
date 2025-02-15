@@ -3,7 +3,7 @@ module github.com/bots-go-framework/bots-fw-mocks
 go 1.23.5
 
 require (
-	github.com/bots-go-framework/bots-fw v0.53.0
+	github.com/bots-go-framework/bots-fw v0.55.0
 	github.com/bots-go-framework/bots-fw-store v0.10.0
 	github.com/dal-go/dalgo v0.16.1
 	github.com/strongo/i18n v0.6.1
