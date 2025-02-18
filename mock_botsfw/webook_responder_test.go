@@ -10,6 +10,7 @@ import (
 func TestNewMockWebhookResponder(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	responderMock := NewMockWebhookResponder(ctrl)
+	var _ botsfw.WebhookResponder = responderMock
 	if responderMock == nil {
 		t.Fatalf("NewMockWebhookResponder() should not return nil")
 	}

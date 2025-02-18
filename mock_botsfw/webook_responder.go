@@ -41,6 +41,20 @@ func (m *MockWebhookResponder) EXPECT() *MockWebhookResponderMockRecorder {
 	return m.recorder
 }
 
+// DeleteMessage mocks base method.
+func (m *MockWebhookResponder) DeleteMessage(c context.Context, messageID string) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "DeleteMessage", c, messageID)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// DeleteMessage indicates an expected call of DeleteMessage.
+func (mr *MockWebhookResponderMockRecorder) DeleteMessage(c, messageID any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteMessage", reflect.TypeOf((*MockWebhookResponder)(nil).DeleteMessage), c, messageID)
+}
+
 // SendMessage mocks base method.
 func (m_2 *MockWebhookResponder) SendMessage(c context.Context, m botsfw.MessageFromBot, channel botsfw.BotAPISendMessageChannel) (botsfw.OnMessageSentResponse, error) {
 	m_2.ctrl.T.Helper()

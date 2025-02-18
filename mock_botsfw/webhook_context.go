@@ -16,9 +16,9 @@ import (
 
 	botsfwmodels "github.com/bots-go-framework/bots-fw-store/botsfwmodels"
 	botinput "github.com/bots-go-framework/bots-fw/botinput"
+	botsdal "github.com/bots-go-framework/bots-fw/botsdal"
 	botsfw "github.com/bots-go-framework/bots-fw/botsfw"
 	dal "github.com/dal-go/dalgo/dal"
-	record "github.com/dal-go/dalgo/record"
 	i18n "github.com/strongo/i18n"
 	gomock "go.uber.org/mock/gomock"
 )
@@ -116,21 +116,6 @@ func (m *MockWebhookContext) BotPlatform() botsfw.BotPlatform {
 func (mr *MockWebhookContextMockRecorder) BotPlatform() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BotPlatform", reflect.TypeOf((*MockWebhookContext)(nil).BotPlatform))
-}
-
-// BotUser mocks base method.
-func (m *MockWebhookContext) BotUser() (record.DataWithID[string, botsfwmodels.PlatformUserData], error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "BotUser")
-	ret0, _ := ret[0].(record.DataWithID[string, botsfwmodels.PlatformUserData])
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// BotUser indicates an expected call of BotUser.
-func (mr *MockWebhookContextMockRecorder) BotUser() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "BotUser", reflect.TypeOf((*MockWebhookContext)(nil).BotUser))
 }
 
 // ChatData mocks base method.
@@ -257,6 +242,36 @@ func (m *MockWebhookContext) GetBotSettings() *botsfw.BotSettings {
 func (mr *MockWebhookContextMockRecorder) GetBotSettings() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBotSettings", reflect.TypeOf((*MockWebhookContext)(nil).GetBotSettings))
+}
+
+// GetBotUser mocks base method.
+func (m *MockWebhookContext) GetBotUser() (botsdal.BotUser, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBotUser")
+	ret0, _ := ret[0].(botsdal.BotUser)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBotUser indicates an expected call of GetBotUser.
+func (mr *MockWebhookContextMockRecorder) GetBotUser() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBotUser", reflect.TypeOf((*MockWebhookContext)(nil).GetBotUser))
+}
+
+// GetBotUserForUpdate mocks base method.
+func (m *MockWebhookContext) GetBotUserForUpdate(ctx context.Context, tx dal.ReadwriteTransaction) (botsdal.BotUser, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetBotUserForUpdate", ctx, tx)
+	ret0, _ := ret[0].(botsdal.BotUser)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetBotUserForUpdate indicates an expected call of GetBotUserForUpdate.
+func (mr *MockWebhookContextMockRecorder) GetBotUserForUpdate(ctx, tx any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBotUserForUpdate", reflect.TypeOf((*MockWebhookContext)(nil).GetBotUserForUpdate), ctx, tx)
 }
 
 // GetBotUserID mocks base method.
@@ -510,20 +525,6 @@ func (mr *MockWebhookContextMockRecorder) TranslateNoWarning(key any, args ...an
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]any{key}, args...)
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TranslateNoWarning", reflect.TypeOf((*MockWebhookContext)(nil).TranslateNoWarning), varargs...)
-}
-
-// Tx mocks base method.
-func (m *MockWebhookContext) Tx() dal.ReadwriteTransaction {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Tx")
-	ret0, _ := ret[0].(dal.ReadwriteTransaction)
-	return ret0
-}
-
-// Tx indicates an expected call of Tx.
-func (mr *MockWebhookContextMockRecorder) Tx() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Tx", reflect.TypeOf((*MockWebhookContext)(nil).Tx))
 }
 
 // UpdateLastProcessed mocks base method.
