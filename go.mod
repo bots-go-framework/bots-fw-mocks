@@ -7,7 +7,7 @@ require (
 	github.com/bots-go-framework/bots-fw-store v0.10.0
 	github.com/dal-go/dalgo v0.18.2
 	github.com/strongo/i18n v0.6.1
-	go.uber.org/mock v0.5.0
+	go.uber.org/mock v0.5.1
 )
 
 require (
