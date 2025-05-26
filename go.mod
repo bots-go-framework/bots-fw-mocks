@@ -5,7 +5,7 @@ go 1.23.5
 require (
 	github.com/bots-go-framework/bots-fw v0.56.10
 	github.com/bots-go-framework/bots-fw-store v0.10.0
-	github.com/dal-go/dalgo v0.19.0
+	github.com/dal-go/dalgo v0.21.0
 	github.com/strongo/i18n v0.6.1
 	go.uber.org/mock v0.5.2
 )
