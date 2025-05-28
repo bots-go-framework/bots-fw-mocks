@@ -47,6 +47,20 @@ func (m *MockWebhookContext) EXPECT() *MockWebhookContextMockRecorder {
 	return m.recorder
 }
 
+// Analytics mocks base method.
+func (m *MockWebhookContext) Analytics() botsfw.WebhookAnalytics {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Analytics")
+	ret0, _ := ret[0].(botsfw.WebhookAnalytics)
+	return ret0
+}
+
+// Analytics indicates an expected call of Analytics.
+func (mr *MockWebhookContextMockRecorder) Analytics() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Analytics", reflect.TypeOf((*MockWebhookContext)(nil).Analytics))
+}
+
 // AppContext mocks base method.
 func (m *MockWebhookContext) AppContext() botsfw.AppContext {
 	m.ctrl.T.Helper()
@@ -200,20 +214,6 @@ func (m *MockWebhookContext) ExecutionContext() botsfw.ExecutionContext {
 func (mr *MockWebhookContextMockRecorder) ExecutionContext() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ExecutionContext", reflect.TypeOf((*MockWebhookContext)(nil).ExecutionContext))
-}
-
-// GA mocks base method.
-func (m *MockWebhookContext) GA() botsfw.GaContext {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "GA")
-	ret0, _ := ret[0].(botsfw.GaContext)
-	return ret0
-}
-
-// GA indicates an expected call of GA.
-func (mr *MockWebhookContextMockRecorder) GA() *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GA", reflect.TypeOf((*MockWebhookContext)(nil).GA))
 }
 
 // GetBotCode mocks base method.
