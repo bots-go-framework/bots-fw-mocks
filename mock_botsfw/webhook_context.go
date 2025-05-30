@@ -527,6 +527,20 @@ func (mr *MockWebhookContextMockRecorder) TranslateNoWarning(key any, args ...an
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TranslateNoWarning", reflect.TypeOf((*MockWebhookContext)(nil).TranslateNoWarning), varargs...)
 }
 
+// TranslateWithMap mocks base method.
+func (m *MockWebhookContext) TranslateWithMap(key string, args map[string]string) string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "TranslateWithMap", key, args)
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+// TranslateWithMap indicates an expected call of TranslateWithMap.
+func (mr *MockWebhookContextMockRecorder) TranslateWithMap(key, args any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "TranslateWithMap", reflect.TypeOf((*MockWebhookContext)(nil).TranslateWithMap), key, args)
+}
+
 // UpdateLastProcessed mocks base method.
 func (m *MockWebhookContext) UpdateLastProcessed(chatEntity botsfwmodels.BotChatData) error {
 	m.ctrl.T.Helper()

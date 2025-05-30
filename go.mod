@@ -3,10 +3,10 @@ module github.com/bots-go-framework/bots-fw-mocks
 go 1.24.3
 
 require (
-	github.com/bots-go-framework/bots-fw v0.57.10
+	github.com/bots-go-framework/bots-fw v0.58.0
 	github.com/bots-go-framework/bots-fw-store v0.10.0
 	github.com/dal-go/dalgo v0.21.0
-	github.com/strongo/i18n v0.6.1
+	github.com/strongo/i18n v0.7.1
 	go.uber.org/mock v0.5.2
 )
 
